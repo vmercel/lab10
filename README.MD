@@ -54,28 +54,28 @@
 # Screenshots
 
 ### Use Case
-[Use Case](images/usecase.PNG)
+![Use Case](images/usecase.png)
 
 ### Class Diagram
-[Class Diagram](images/class.PNG)
+![Class Diagram](images/class.png)
 
 ### IDE
-[IDE](images/ide.PNG)
+![IDE](images/ide.png)
 
 ### Landing Page
-[Landing Page](images/landing.PNG)
+![Landing Page](images/landing.png)
 
 ### Login Page
-[Login Page](images/login.PNG)
+![Login Page](images/login.png)
 
 ### Register Page
-[Register Page](images/register.PNG)
+![Register Page](images/register.png)
 
 ### Add Student
-[Add Student](images/add_student.PNG)
+![Add Student](images/add_student.png)
 
 ### Student List
-[Student List](images/student_list.PNG)
+![Student List](images/student_list.png)
 
 # Contributing
 
