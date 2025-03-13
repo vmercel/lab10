@@ -1,0 +1,134 @@
+<!-- fragments/footer.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Sticky Footer Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+        }
+        main {
+            flex: 1 0 auto; /* Grow to fill space, don't shrink */
+        }
+        footer {
+            flex-shrink: 0; /* Prevent footer from shrinking */
+            background: linear-gradient(90deg, #2a5298, #1e3c72);
+            color: #ffffff;
+            padding: 3rem 0 1.5rem;
+            border-top: 2px solid #ffd700;
+        }
+        footer h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        footer a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        footer a:hover {
+            color: #ffd700;
+            transform: translateX(5px);
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin-bottom: 0.8rem;
+        }
+        .footer-social a {
+            font-size: 1.6rem;
+            margin-right: 1.2rem;
+            color: #ffffff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .footer-social a:hover {
+            color: #ffd700;
+            transform: scale(1.2);
+        }
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .footer-bottom a {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .row > div {
+                margin-bottom: 2rem;
+            }
+            .footer-bottom {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div th:fragment="footer">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About eRegistrar</h5>
+                    <p>eRegistrar is a cutting-edge platform revolutionizing education management with seamless student administration, course scheduling, and scholarship tracking.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a th:href="@{/courses}">Courses</a></li>
+                        <li><a th:href="@{/admission}">Admission</a></li>
+                        <li><a th:href="@{/scholarships}">Scholarships</a></li>
+                        <li><a th:href="@{/about}">About Us</a></li>
+                        <li><a th:href="@{/students}">Students</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><a href="mailto:support@eregistrar.edu">support@eregistrar.edu</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Education Lane, Academic City, USA</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="mt-3"><a href="/support">Support Center</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 eRegistrar. All Rights Reserved. | <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
