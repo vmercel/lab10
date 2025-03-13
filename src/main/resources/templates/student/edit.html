@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Edit Student</h1>
+    <form th:action="@{/students/{id}(id=${student.studentId})}" th:object="${student}" method="post">
+        <!-- Student Number -->
+        <div class="form-group">
+            <label for="studentNumber">Student Number:</label>
+            <input type="text" class="form-control" id="studentNumber" th:field="*{studentNumber}" required>
+        </div>
+
+        <!-- First Name -->
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName" th:field="*{firstName}" required>
+        </div>
+
+        <!-- Middle Name -->
+        <div class="form-group">
+            <label for="middleName">Middle Name:</label>
+            <input type="text" class="form-control" id="middleName" th:field="*{middleName}">
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" th:field="*{lastName}" required>
+        </div>
+
+        <!-- CGPA -->
+        <div class="form-group">
+            <label for="cgpa">CGPA:</label>
+            <input type="number" step="0.01" class="form-control" id="cgpa" th:field="*{cgpa}">
+        </div>
+
+        <!-- Enrollment Date -->
+        <div class="form-group">
+            <label for="enrollmentDate">Enrollment Date:</label>
+            <input type="date" class="form-control" id="enrollmentDate" th:field="*{enrollmentDate}" required>
+        </div>
+
+        <!-- Is International -->
+        <div class="form-group">
+            <label>Is International:</label>
+            <select class="form-control" th:field="*{isInternational}">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a th:href="@{/students}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
